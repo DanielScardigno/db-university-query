@@ -1,86 +1,86 @@
 Ex 1
 
-select *
-from `students`
-where year(`date_of_birth`) = 1990
-order by `date_of_birth`;
+SELECT *
+FROM `students`
+WHERE YEAR(`date_of_birth`) = 1990
+ORDER BY `date_of_birth`;
 
 
 Ex 2
 
-select *
-from `courses`
-where `cfu` > 10
-order by `cfu`;
+SELECT *
+FROM `courses`
+WHERE `cfu` > 10
+ORDER BY `cfu`;
 
 
 Ex 3
 
-select *
-from `students`
-where year(`date_of_birth`) <= 1994
-order by `date_of_birth`;
+SELECT *
+FROM `students`
+WHERE YEAR(`date_of_birth`) <= 1994
+ORDER BY `date_of_birth`;
 
 
 Ex 4
 
-select *
-from `courses`
-where `period` = "I semestre"
-and `year` = 1;
+SELECT *
+FROM `courses`
+WHERE `period` = "I semestre"
+AND `YEAR` = 1;
 
 
 Ex 5
 
-select *
-from `exams`
-where date = '2020-06-20'
-and hour > '14:00:00'
-order by hour;
+SELECT *
+FROM `exams`
+WHERE date = '2020-06-20'
+AND hour > '14:00:00'
+ORDER BY hour;
 
 
 Ex 6
 
-select *
-from `degrees`
-where `level` = "magistrale";
+SELECT *
+FROM `degrees`
+WHERE `level` = "magistrale";
 
 
 Ex 7
 
-select count(`id`)
-from `departments`;
+SELECT count(`id`)
+FROM `departments`;
 
 
 Ex 8
 
-select count(`id`)
-from `teachers`
-where `phone` is null;
+SELECT count(`id`)
+FROM `teachers`
+WHERE `phone` is null;
 
 
 Ex 9
 
-insert into `students` (`degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`)
-values (7, "Daniel", "Scardigno", '2004-06-30', "abcdefghijklmopqrstuvwxyz", '2025-01-14', 77, "danielscardigno@gmail.com");
+INSERT INTO `students` (`degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`)
+VALUES (7, "Daniel", "Scardigno", '2004-06-30', "abcdefghijklmopqrstuvwxyz", '2025-01-14', 77, "danielscardigno@gmail.com");
 
 
 Ex 10
 
-update `teachers`
-set `office_number` = 126
+UPDATE `teachers`
+SET `office_number` = 126
 
-where `id` = 58;                <--- con safe mode
+WHERE `id` = 58;                <--- con safe mode
 
-where `name` = "Pietro"
-and `surname` = "Rizzo";        <--- senza safe mode
+WHERE `name` = "Pietro"
+AND `surname` = "Rizzo";        <--- senza safe mode
 
 
 Ex 11
 
-delete from `students`
+DELETE FROM `students`
 
-where `id` = 5001;              <--- con safe mode
+WHERE `id` = 5001;              <--- con safe mode
 
-where `name` = "Daniel"
-and `surname` = "Scardigno";    <--- senza safe mode
+WHERE `name` = "Daniel"
+AND `surname` = "Scardigno";    <--- senza safe mode

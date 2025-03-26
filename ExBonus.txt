@@ -1,27 +1,27 @@
 Ex 1
 
-select count(`id`), year(`enrolment_date`)
-from `students`
-group by year(`enrolment_date`)
-order by year(`enrolment_date`);
+SELECT COUNT(`id`), YEAR(`enrolment_date`)
+FROM `students`
+GROUP BY YEAR(`enrolment_date`)
+order BY YEAR(`enrolment_date`);
 
 
 Ex 2
 
-select count(`id`), `office_address`
-from `teachers`
-group by `office_address`;
+SELECT COUNT(`id`), `office_address`
+FROM `teachers`
+GROUP BY `office_address`;
 
 
 Ex 3
 
-select `student_id`, avg(`vote`)
-from `exam_student`
-group by `student_id`;
+SELECT `student_id`, avg(`vote`)
+FROM `exam_student`
+GROUP BY `student_id`;
 
 
 Ex 4
 
-select `department_id` as "Dipartimento", count(`id`) as "Corsi di laurea"
-from `degrees`
-group by `department_id`;
+SELECT `department_id` as "Dipartimento", COUNT(`id`) as "Corsi di laurea"
+FROM `degrees`
+GROUP BY `department_id`;
