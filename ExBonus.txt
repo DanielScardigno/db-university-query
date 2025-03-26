@@ -3,7 +3,7 @@ Ex 1
 SELECT COUNT(`id`), YEAR(`enrolment_date`)
 FROM `students`
 GROUP BY YEAR(`enrolment_date`)
-order BY YEAR(`enrolment_date`);
+ORDER BY YEAR(`enrolment_date`);
 
 
 Ex 2
